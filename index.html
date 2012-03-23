@@ -1,0 +1,225 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+
+<!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/i/378 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+
+<!-- Mobile viewport optimized: h5bp.com/viewport -->
+<meta name="viewport" content="width=device-width">
+
+<!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="css/scrollbar.css">
+<link href="js/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>
+<!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+<!-- All JavaScript at the bottom, except this Modernizr build.
+       Modernizr enables HTML5 elements & feature detects for optimal performance.
+       Create your own custom Modernizr build: www.modernizr.com/download/ -->
+<script src="js/libs/modernizr-2.5.2.min.js"></script>
+</head>
+<body >
+<div id="container">
+  <div id="left"> <img src="img/leftBorder.png" width="157"  alt="header"></div>
+  <div id="main"> 
+    <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you support IE 6.
+       chromium.org/developers/how-tos/chrome-frame-getting-started --> 
+    <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+    <header> <img src="img/header.png" width="997"  alt="header"> </header>
+    <div role="main">
+      <div id="content">
+        <div class="showcase">
+          <h1>Showcase</h1>
+          <h2>Sorteren op:</h2>
+          <p>&nbsp;</p>
+          <div id="mcs5_container">
+            <div class="dragger_container" style="display: block;">
+                  <div class="dragger ui-draggable" style="display: block; left: 0px;"></div>
+                </div>
+            <div class="customScrollBox"> 
+              <!-- horWrapper div is important for horizontal scrollers! -->
+              <div class="horWrapper">
+                <div class="container" >
+                  <div class="content">
+                    <h4>2012</h4>
+                    <p><img src="img/scrollbar/1-riya-sen Sexy Image.jpg" height="350" /><img src="img/scrollbar/Babydoll Sexy Image.jpg" height="350" /><img src="img/scrollbar/ladyOne.jpg" height="350" /><img src="img/scrollbar/1-riya-sen Sexy Image.jpg" height="350" /><img src="img/scrollbar/1-riya-sen Sexy Image.jpg" height="350" /><img src="img/scrollbar/Sexy Image linux.jpg" height="350" /><img src="img/scrollbar/1-riya-sen Sexy Image.jpg" height="350" /><img src="img/scrollbar/sexy-photo-61324.jpg" height="350" /><img src="img/scrollbar/Sexy Image nurse.jpg" height="350" /><img src="img/scrollbar/1-riya-sen Sexy Image.jpg" height="350" /><img src="img/scrollbar/Sexy Image photo.jpg" height="350" /></p>
+                  </div>
+                </div>
+              
+              </div>
+              
+            </div>
+            <a class="scrollUpBtn" href="#" style="display: inline-block;">⇦</a> <a class="scrollDownBtn" href="#" style="display: inline-block;">⇨</a> </div>
+          <!-- content to show if javascript is disabled -->
+          <noscript>
+          <style type="text/css">
+		#mcs_container .customScrollBox,#mcs2_container .customScrollBox,#mcs3_container .customScrollBox,#mcs4_container .customScrollBox,#mcs5_container .customScrollBox{overflow:auto;}
+		#mcs_container .dragger_container,#mcs2_container .dragger_container,#mcs3_container .dragger_container,#mcs4_container .dragger_container,#mcs5_container .dragger_container{display:none;}
+	</style>
+          </noscript>
+          <script>
+$(window).load(function() {
+	mCustomScrollbars();
+});
+
+function mCustomScrollbars(){
+	/* 
+	malihu custom scrollbar function parameters: 
+	1) scroll type (values: "vertical" or "horizontal")
+	2) scroll easing amount (0 for no easing) 
+	3) scroll easing type 
+	4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+	5) scrollbar height/width adjustment (values: "auto" or "fixed")
+	6) mouse-wheel support (values: "yes" or "no")
+	7) scrolling via buttons support (values: "yes" or "no")
+	8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+	*/
+ 
+	$("#mcs5_container").mCustomScrollbar("horizontal",500,"easeOutCirc",1,"fixed","yes","yes",20); 
+}
+
+/* function to fix the -10000 pixel limit of jquery.animate */
+$.fx.prototype.cur = function(){
+    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
+      return this.elem[ this.prop ];
+    }
+    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+    return typeof r == 'undefined' ? 0 : r;
+}
+
+/* function to load new content dynamically */
+function LoadNewContent(id,file){
+	$("#"+id+" .customScrollBox .content").load(file,function(){
+		mCustomScrollbars();
+	});
+}
+</script> 
+          <script src="js/jquery.mCustomScrollbar.js"></script>
+          <div class="about">
+            <h1>Where it all started</h1>
+            <br />
+            <p>Praesent aliquam tellus nisl. Nulla quis mauris et dolor fringilla dignissim at sit amet sapien. Cras faucibus dictum nibh ac viverra. Nulla condimentum laoreet libero in scelerisque. Praesent volutpat imperdiet accumsan. Donec viverra erat in massa rutrum vitae dapibus erat sagittis. Morbi scelerisque, magna non tincidunt dictum, magna nibh sodales eros, in semper metus lectus id turpis. Donec a magna lacus. Quisque consequat semper ipsum ut lacinia. Nulla facilisi. Pellentesque ullamcorper lacus sed massa tristique consequat. Suspendisse potenti. Suspendisse venenatis nunc sit amet risus volutpat et semper magna hendrerit. Maecenas sem ante, porta a suscipit quis, sodales malesuada lectus. </p>
+          </div>
+          <div class="resume">
+            <h1>Resume</h1>
+            <h2>Talenkenis</h2>
+            <ul>
+              <li> Nederlands (moedertaal) </li>
+              <li>Frans (matig) </li>
+              <li>Engels (zeer goed) </li>
+            </ul>
+            <br/>
+            <h2>Opleiding</h2>
+            <ul>
+              <li>1 ASO </li>
+              <li></li>
+              <li></li>
+            </ul>
+            <br/>
+            <h2>do you prefer a print-out?</h2>
+            <span>No problem! switch on your printer 
+            and click on of  the buttons below! </span> <br/>
+            <div id="downloadResume">
+              <ul >
+                <li>Nederlands</li>
+                <li>Francais</li>
+                <li>English</li>
+              </ul>
+              <div class="clearfix"></div>
+            </div>
+            <div class="contact">
+              <h1>Get in touch</h1>
+              <p></p>
+            </div>
+          </div>
+          <footer> </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="right"> <img src="img/rightBorder.png" width="182"  alt="header"></div>
+</div>
+
+<!-- JavaScript at the bottom for fast page loading --> 
+
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline --> 
+<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script> 
+<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script> 
+--> 
+<!-- scripts concatenated and minified via build script --> 
+<script src="js/plugins.js"></script> 
+<script src="js/script.js"></script> <!-- content to show if javascript is disabled -->
+
+<!-- content to show if javascript is disabled -->
+<noscript>
+	<style type="text/css">
+		#mcs_container .customScrollBox,#mcs2_container .customScrollBox,#mcs3_container .customScrollBox,#mcs4_container .customScrollBox,#mcs5_container .customScrollBox{overflow:auto;}
+		#mcs_container .dragger_container,#mcs2_container .dragger_container,#mcs3_container .dragger_container,#mcs4_container .dragger_container,#mcs5_container .dragger_container{display:none;}
+	</style>
+</noscript>
+
+<script>
+$(window).load(function() {
+	mCustomScrollbars();
+});
+
+function mCustomScrollbars(){
+	/* 
+	malihu custom scrollbar function parameters: 
+	1) scroll type (values: "vertical" or "horizontal")
+	2) scroll easing amount (0 for no easing) 
+	3) scroll easing type 
+	4) extra bottom scrolling space for vertical scroll type only (minimum value: 1)
+	5) scrollbar height/width adjustment (values: "auto" or "fixed")
+	6) mouse-wheel support (values: "yes" or "no")
+	7) scrolling via buttons support (values: "yes" or "no")
+	8) buttons scrolling speed (values: 1-20, 1 being the slowest)
+	*/
+	$("#mcs5_container").mCustomScrollbar("horizontal",500,"easeOutCirc",1,"fixed","yes","yes",20); 
+}
+
+/* function to fix the -10000 pixel limit of jquery.animate */
+$.fx.prototype.cur = function(){
+    if ( this.elem[this.prop] != null && (!this.elem.style || this.elem.style[this.prop] == null) ) {
+      return this.elem[ this.prop ];
+    }
+    var r = parseFloat( jQuery.css( this.elem, this.prop ) );
+    return typeof r == 'undefined' ? 0 : r;
+}
+
+/* function to load new content dynamically */
+function LoadNewContent(id,file){
+	$("#"+id+" .customScrollBox .content").load(file,function(){
+		mCustomScrollbars();
+	});
+}
+</script>
+<script src="jquery.mCustomScrollbar.js"></script>
+	<!-- end scripts --> 
+
+	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+       mathiasbynens.be/notes/async-analytics-snippet --><script>
+    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+    s.parentNode.insertBefore(g,s)}(document,'script'));
+  </script>
+</body>
+</html>
